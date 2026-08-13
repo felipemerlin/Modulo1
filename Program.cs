@@ -1,21 +1,23 @@
-﻿string nomeProfissional = "João Programador";
-string emailContato = "joao.prog@exemplo.com";
-int anoNascimento = 2006;
-bool estaDisponivel = true;
+﻿string usuarioCorreto = "aluno";
+string senhaCorreta = "1234";
 
-int Idade = DateTime.Now.Year - anoNascimento;
+string usuarioDigitado = "";
+string senhaDigitada = "";
 
-Console.WriteLine("--- Cartão de Visitas Digital ---");
-Console.WriteLine($"Nome: {nomeProfissional}");
-Console.WriteLine($"Email: {emailContato}");
-Console.WriteLine($"Idade: {Idade} anos");
-Console.WriteLine("Status: Disponível para projetos!");
+do
+{
 
-estaDisponivel = false;
+    Console.Write("Digite o usuário: ");
+    usuarioDigitado = Console.ReadLine();
 
-Console.WriteLine();
-Console.WriteLine("--- Status Atualizado ---");
-Console.WriteLine($"Nome: {nomeProfissional}");
-Console.WriteLine($"Email: {emailContato}");
-Console.WriteLine($"Idade: {Idade} anos");
-Console.WriteLine($"Status: {estaDisponivel}");
+    Console.Write("Digite a senha: ");
+    senhaDigitada = Console.ReadLine();
+
+    if (usuarioDigitado != usuarioCorreto || senhaDigitada != senhaCorreta)
+    {
+        Console.WriteLine("Usuário ou senha inválidos. Tente novamente.");
+    }
+
+} while (usuarioDigitado != usuarioCorreto || senhaDigitada != senhaCorreta);
+
+Console.WriteLine($"Login efetuado com sucesso! Bem-vindo(a), {usuarioDigitado}.");
