@@ -1,0 +1,34 @@
+﻿static bool VerificarPrecoPromocional(double precoProduto, double precoMaximo)
+{
+    return precoProduto <= precoMaximo;
+}
+
+double produto1 = 45.0;
+double maximo1 = 50.0;
+
+Console.WriteLine($"Verificando produto 1 (R$ {produto1:F2} com máximo R$ {maximo1:F2}):");
+
+if (VerificarPrecoPromocional(produto1, maximo1))
+{
+    Console.WriteLine("Está em promoção!");
+}
+else
+{
+    Console.WriteLine("Não está em promoção.");
+}
+
+Console.WriteLine();
+
+double produto2 = 55.0;
+double maximo2 = 50.0;
+
+Console.WriteLine($"Verificando produto 2 (R$ {produto2:F2} com máximo R$ {maximo2:F2}):");
+
+if (VerificarPrecoPromocional(produto2, maximo2))
+{
+    Console.WriteLine("Está em promoção!");
+}
+else
+{
+    Console.WriteLine("Não está em promoção.");
+}
